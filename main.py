@@ -1,6 +1,7 @@
 import cria_conta as conta
 import deposita
 import saca
+import extrato
 
 id=0
 contas=[]
@@ -24,7 +25,7 @@ dados.close()
 ig=True
 
 while ig==True:
-    act=int(input('\n1 para criar conta\n2 para realizar um deposito\n3 para sacar dinheiro\n99 para encerrar seção\n'))
+    act=int(input('\n1 para criar conta\n2 para realizar um deposito\n3 para sacar dinheiro\n4 para exibir saldo de uma conta especifica\n5 para exibir todas as contas\n6 para encerrar seção\n'))
 
     match act:
 
@@ -67,7 +68,14 @@ while ig==True:
 
             dados.close()
 
-        case 99:
+        case 4:
+            extrato.extrato(contas)
+
+        case 5:
+            for x in contas:
+                print(x)
+
+        case 6:
             ig=False
 
         case _:
