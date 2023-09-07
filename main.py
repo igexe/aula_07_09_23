@@ -1,5 +1,6 @@
 import cria_conta as conta
 import deposita
+import saca
 
 id=0
 contas=[]
@@ -23,7 +24,7 @@ dados.close()
 ig=True
 
 while ig==True:
-    act=int(input('\n1 para criar conta\n2 para realizar um deposito\n99 para encerrar seção\n'))
+    act=int(input('\n1 para criar conta\n2 para realizar um deposito\n3 para sacar dinheiro\n99 para encerrar seção\n'))
 
     match act:
 
@@ -44,6 +45,18 @@ while ig==True:
 
         case 2:
             deposita.deposita(contas)
+
+            salva=str(id)+'\n'
+            for x in contas:
+                salva+=str(x)+'\n'
+
+            dados=open('dados.txt','w')
+            dados.writelines(salva)
+
+            dados.close()
+
+        case 3:
+            saca.saca(contas)
 
             salva=str(id)+'\n'
             for x in contas:

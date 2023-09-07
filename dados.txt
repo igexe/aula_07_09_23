@@ -1,2 +1,3 @@
-1
-{'id_conta': 1, 'numero': 5454, 'titular': 'inacio', 'saldo': 300.0, 'tipo da conta': 'poupança', 'limite': 1000.0}
+2
+{'id_conta': 1, 'numero': 5454, 'titular': 'inacio', 'saldo': 0.0, 'tipo da conta': 'poupanï¿½a', 'limite': 1000.0}
+{'id_conta': 2, 'numero': 8888, 'titular': 'joÃ£o', 'saldo': 100.0, 'tipo da conta': 'corrente', 'limite': 1000.0}
